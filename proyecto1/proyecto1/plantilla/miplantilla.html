@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include "barra.html"%}
+    <h1 style = "color: brown;">Hola mundo</h1>
+    <p>mi nombre es {{nombre.upper}} y tengo {{edad}} anios y la Fecha es {{fecha.day}}/{{ fecha.month}} / {{ fecha.year}}</p>
+    <p><strong>Temas del curso</strong></p>
+    <p>
+        <ul>
+            {% if temas %}
+                {% for valor in temas%}
+
+                    <li>{{valor}}</li>
+
+                {% endfor %}
+            
+            {% else %}          
+                <p>No hay elementos para mostrar</p>
+            {% endif %}
+
+        </ul>
+    </p>
+</body>
+</html>
