@@ -1,46 +1,62 @@
-# Request: para realizar peticiones
-# HttpResponse: Para enviar la respuesta usando el protocolo HTTP
-
+# primero Importamos la Clase HTTPResponset
+import datetime
 from django.http import HttpResponse
-from django.template import Template, Context, loader
-from datetime import datetime
-from django.shortcuts import render
+from django.template import Template, Context
 
-class Persona(object):
-    def __init__(self, nombre, apellido,edad):
-        self.nombre= nombre
-        self.apellido= apellido
-        self.edad= edad
+# Creamos la vista
+
+def saludo(request): # primera vista
+    doc_html = open("Proyecto1/plantillas/plantillaSaludo.html") 
+    
+    # cramos un objeto template
+    plt = Template(doc_html.read())
+    doc_html.close()
+    fecha = datetime.datetime.now()
+    # cramos el contexto
+    datos = {"nombre":"Carlos Herazo","id":"11111","fecha":fecha}
+    ctx = Context(datos)
+
+    # pasamos el contexto al obteto template
+
+    response = plt.render(ctx)
+
+    return HttpResponse(response)
+
+def despedida(request): # segunda vista
+
+    return HttpResponse("Chao compañeros")
+
+def fechaHoy(request):  #tercera vista
+    fecha_actual = datetime.datetime.now()
+    
+    response =f"""
+            <html>
+                <body>
+                    <h1>
+                        la fecha de hoy es: {fecha_actual}
+                    </h1>
+                </body>
+            </html>
+
+            """
+    return HttpResponse(response)  # cuarta vista
 
 
+def edad(request, agno, edad, agnoActual):  # quinta vista
+    periodo = agno-agnoActual
+    edadFutura = (edad) + periodo
+    fecha_actual = datetime.datetime.now()
+    
+    response =f"""
+            <html>
+                <body>
+                    <h1>
+                        Actualmente tiene {edad}, y en el año {agno} tendras {edadFutura} años
+                    </h1>
+                </body>
+            </html>
 
-def saludo(request):  # primera vista, devuelve una respuesta con el texto
-    p1= Persona("Juan","Herazo",19)
-    fecha_actual=datetime.now().date()
-    #doc_externo=open("C:/Users/carhe/OneDrive/Escritorio/ProyectosDjango/proyecto1/proyecto1/plantilla/miplantilla.html")
-    #plt = Template(doc_externo.read())
-    #doc_externo.close()
+            """
+    return HttpResponse(response)
 
-   
-    temas_cursos = ["python","Django","SQLITE3","MVT","Formularios","Plantillas","Despliegues"]
-   
-    #ORDEN DE LLAMADAS
-    # DICCIONARIOS
-    # ATRIBUTOS
-    # METODOS
-    # LISTAS
-   # pasar variablezs a las plantillas
-   # doc_externo = loader.get_template("miplantilla.html")
-   # ctx = Context({"nombre":p1.nombre,"edad":p1.edad,"fecha":fecha_actual, "temas": temas_cursos })
-   # document = doc_externo.render({"nombre":p1.nombre,"edad":p1.edad,"fecha":fecha_actual, "temas": temas_cursos })
 
-    return render(request,"miplantilla.html",{"nombre":p1.nombre,"edad":p1.edad,"fecha":fecha_actual, "temas": temas_cursos })
-
-def cursoC(request):
-    fecha_actual=datetime.now().date()
-
-    return render(request,"CursosC.html",{"fecha":fecha_actual})
-
-def cursoCss(request):
-    fecha_actual=datetime.now().date()
-    return render(request,"CursosCss.html",{"fecha":fecha_actual})
