@@ -1,0 +1,17 @@
+"""INSERTAR"""
+var = CLASS(col="",col="",...)
+var.save()
+
+var = CLASS.objects.create(col="",col"",...)
+
+"""ACTUALIZAR"""
+var.col = ""
+var.save()
+
+"""BORRAR"""
+var = CLASS.objects.get(id=num)
+var.delete()
+
+"""SELECCIONAR"""
+var = CLASS.objects.all()
+var.query.__str__()

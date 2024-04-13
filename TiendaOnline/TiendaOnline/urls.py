@@ -1,5 +1,5 @@
-""""
-URL configuration for Proyecto1 project.
+"""
+URL configuration for TiendaOnline project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -16,10 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Proyecto1.Views import contactos, acerca_de
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('contacto/', contactos, name='contacto'),
-    path('acerca_de/', acerca_de, name='acerca_de'),
 ]
