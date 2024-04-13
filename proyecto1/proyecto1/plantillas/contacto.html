@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Contacto
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 mb-3">
+        <h2 class="mb-4">Contactanos</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus justo id nunc fermentum, sit
+          amet vulputate ex pretium. Phasellus vel ultrices sapien. Nulla facilisi. Donec feugiat ex nec sapien cursus
+          feugiat. Duis pretium felis sit amet quam consequat, eu sodales velit convallis. Suspendisse non tellus eget metus
+          tincidunt fermentum. Nunc sodales enim nec justo luctus, eu dictum mi faucibus. Integer condimentum tincidunt
+          quam, non tempus velit. Pellentesque eget vestibulum arcu. Nullam malesuada urna non sapien tincidunt ultrices.
+          Pellentesque euismod nibh a libero tempus ultricies. Donec eget nunc magna.</p>
+    </div>
+    <div class="col">
+        <h1>Formulario de Contacto</h1>
+    </div>
+    <form>
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Escribe tu correo electrónico">
+        </div>
+        <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+
+
+            
+{% endblock %}

@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        /* Estilos para el header */
+header {
+    background-color: #333; /* Color de fondo del header */
+    color: #fff; /* Color de texto */
+    padding: 10px 0; /* Espaciado interno (arriba y abajo: 10px, izquierda y derecha: 0) */
+}
+
+.container {
+    max-width: 1200px; /* Ancho máximo del contenido del header */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    padding: 0 20px; /* Espaciado interno del contenido (arriba y abajo: 0, izquierda y derecha: 20px) */
+    display: flex; /* Utilizar flexbox para alinear elementos */
+    justify-content: space-between; /* Alinear elementos al principio y al final */
+    align-items: center; /* Alinear elementos verticalmente al centro */
+}
+
+h1 {
+    margin: 0; /* Eliminar margen superior e inferior del título */
+}
+
+nav ul {
+    list-style-type: none; /* Eliminar viñetas de la lista */
+    margin: 0; /* Eliminar margen superior e inferior de la lista */
+    padding: 0; /* Eliminar espaciado interno de la lista */
+    display: flex; /* Utilizar flexbox para alinear elementos */
+}
+
+nav ul li {
+    margin-right: 20px; /* Espacio entre elementos de la lista */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Eliminar margen derecho del último elemento de la lista */
+}
+
+nav ul li a {
+    color: #fff; /* Color de texto de los enlaces */
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+}
+
+    </style>
+</head>
+
+    <header>
+        <div class="container">
+            <h1>Bienvenidos a mi pagina</h1>
+            <nav>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="{% url 'acerca_de' %}">Acerca de</a></li>
+                    <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Contenido de tu página --> 
+
+</html>

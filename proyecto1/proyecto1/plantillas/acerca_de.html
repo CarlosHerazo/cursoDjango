@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Acerca de
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-6">
+    <h2 class="mb-4">Acerca de mi sitio</h2>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus justo id nunc fermentum, sit
+      amet vulputate ex pretium. Phasellus vel ultrices sapien. Nulla facilisi. Donec feugiat ex nec sapien cursus
+      feugiat. Duis pretium felis sit amet quam consequat, eu sodales velit convallis. Suspendisse non tellus eget metus
+      tincidunt fermentum. Nunc sodales enim nec justo luctus, eu dictum mi faucibus. Integer condimentum tincidunt
+      quam, non tempus velit. Pellentesque eget vestibulum arcu. Nullam malesuada urna non sapien tincidunt ultrices.
+      Pellentesque euismod nibh a libero tempus ultricies. Donec eget nunc magna.</p>
+    <a href="#" class="btn btn-primary">Ver más</a>
+  </div>
+  <div class="col-md-6">
+    <img src="https://via.placeholder.com/600x400" alt="Imagen de ejemplo" class="img-fluid">
+  </div>
+
+  <!-- Contenido Adicional aquí -->
+  <div class="col-md-12 mt-5">
+    <h3>Conocenos</h3>
+    <p>Este es el contenido que aparecerá debajo del slider de imágenes.</p>
+  </div>
+
+  <div class="col-md-12 mt-2">
+    <h2 class="mb-4">Nuestro equipo</h2>
+    <div id="productSlider" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <!-- Primer producto -->
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                  <h5 class="card-title">Diseñador</h5>
+                  <p class="card-text">Descripción</p>
+                </div>
+              </div>
+            </div>
+            <!-- Segundo producto -->
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="Producto 2">
+                <div class="card-body">
+                  <h5 class="card-title">QUA</h5>
+                  <p class="card-text">Descripción</p>
+                </div>
+              </div>
+            </div>
+            <!-- Tercer producto -->
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="Producto 3">
+                <div class="card-body">
+                  <h5 class="card-title">Desarrollador</h5>
+                  <p class="card-text">Descripción</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Añadir más carousel-items según la cantidad de productos -->
+        <div class="carousel-item active">
+          <div class="row">
+            <!-- Primer producto -->
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="Producto 4">
+                <div class="card-body">
+                  <h5 class="card-title">Gerente de proyectos</h5>
+                  <p class="card-text">Descripción</p>
+                </div>
+              </div>
+            </div>
+            <!-- Segundo producto -->
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="Producto 5">
+                <div class="card-body">
+                  <h5 class="card-title">Administrador</h5>
+                  <p class="card-text">Descripción</p>
+                </div>
+              </div>
+            </div>
+            <!-- Tercer producto -->
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="Producto 6">
+                <div class="card-body">
+                  <h5 class="card-title">Analista de Datos</h5>
+                  <p class="card-text">Descripción</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Botones de control del slider -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#productSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#productSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}
