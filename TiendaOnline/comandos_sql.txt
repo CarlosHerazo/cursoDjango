@@ -15,3 +15,19 @@ var.delete()
 """SELECCIONAR"""
 var = CLASS.objects.all()
 var.query.__str__()
+
+
+"""FILTRAR""
+POR CATEGORIA
+>>> Articulos.objects.filter(seccion='Ropa')
+
+MAYOR QUE:
+>>> Articulos.objects.filter(precio__gte=100)
+
+ORDENAR MENOR A MAYOR:
+
+>>> Articulos.objects.filter(precio__gte=100).order_by('precio')
+
+ORDENAR MAYOR A MENOR:
+
+>>> Articulos.objects.filter(precio__gte=100).order_by('-precio')

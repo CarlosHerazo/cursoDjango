@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Producto a buscar: <strong>{{query}}</strong>
+    </h1>
+    <main>
+        {%if articulos %}
+
+        <p>Articulos encontrados: {{articulos|length}} articulos</p>
+
+        <ul>
+
+            {% for articulo in articulos %}
+
+            <li>
+                {{articulo.nombre}} {{articulo.seccion}} {{articulo.precio}}
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>
+            no hay articulos con esa terminacion
+        </p>
+        {% endif %}
+    </main>
+    
+</body>
+</html>
